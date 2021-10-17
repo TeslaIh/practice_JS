@@ -215,3 +215,15 @@
 // }
 
 // console.log(convert('1', 2, 3, '4', 7, 100)) // [1, '2', '3', 4])
+
+/////////////////////////////////////////////////////////////////////////
+
+// Write function, which iterates over array and executes function on each element.
+// executeforEach([1,2,3], function(el) {console.log(el * 2)}) // 2 4 6
+
+// function executeforEach(array, callback) {
+//   for (const item of array) {
+//     callback(item);
+//   }
+// }
+// executeforEach([1,2,3], function(el) {console.log(el * 2)})
