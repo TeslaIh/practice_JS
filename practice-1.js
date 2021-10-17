@@ -169,3 +169,49 @@
 
 /////////////////////////////////////////////////////////////
 
+// Write a function that reverse an integer number. You can't use any array methods, besides push.
+// reverseNumber(12345) returns 54321
+// reverseNumber(-12345) returns -54321
+
+// const number = -12345;
+
+// let splitNum;
+
+// function reverseNums(num) {
+//   if (num > 0) {
+//     splitNum = num.toString().split('');
+//     splitNum = splitNum.reverse();
+//     splitNum = Number(splitNum.join(''));
+//   } else {
+//     splitNum = num.toString().split('');
+//     splitNum.splice(0, 1);
+//     splitNum.reverse();
+//     splitNum = splitNum.join('');
+//     splitNum = Number('-' + splitNum);
+//   }
+//   return splitNum;
+// }
+// console.log (reverseNums(number));
+
+//////////////////////////////////////////////////////////////
+
+// Write a function that converts the argument values. If it will be a string, convert it to number and wise versa.
+// It should return an array of converted values.
+
+// convert('1', 2, 3, '4') // [1, '2', '3', 4]
+
+// function convert(...args) {
+
+//   const newArray = [];
+
+//   for (const arg of args) {
+//     if (arg === Number(arg)) {
+//       newArray.push(arg.toString());
+//     } else {
+//       newArray.push(Number(arg));
+//     }
+//   }
+//   return newArray;
+// }
+
+// console.log(convert('1', 2, 3, '4', 7, 100)) // [1, '2', '3', 4])
