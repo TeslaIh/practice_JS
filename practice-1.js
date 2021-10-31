@@ -227,3 +227,113 @@
 //   }
 // }
 // executeforEach([1,2,3], function(el) {console.log(el * 2)})
+
+// 31.10.2021
+
+// Write a function - positiveSum
+// It should accept an array of numbers and return a result of their addition. But you must calculate only positive numbers and omit negative if any presents.
+// positiveSum([2, 4, 6, 8])   // => 20
+// positiveSum([0, -3, 5, 7])  // => 12
+
+
+// const positiveSum = (arrays) => {
+//     let total = 0;
+//     for (const array of arrays) {
+//         if (array > 0) {
+//             total += array;
+//         }
+//     } return total;
+// };
+
+// console.log(positiveSum([2, 4, 6, 8]));
+// console.log(positiveSum([0, -3, 5, 7]));
+
+// const positiveSum = (arrays) => {
+//     return arrays
+//     .filter(value => value > 0)
+//     .reduce((acc, number) => {
+//         return acc + number;
+//     }, 0);
+// }
+
+// console.log(positiveSum([2, 4, 6, 8]));
+// console.log(positiveSum([0, -3, 5, 7]));
+
+
+// const positiveSum = (arrays) =>
+//     arrays
+//         .reduce((acc, number) =>
+//         (number > 0 ? acc += number : acc ),0);
+
+// console.log(positiveSum([2, 4, 6, 8]));
+// console.log(positiveSum([0, -3, 5, 7]));
+
+///////////////////////////////////////////////////////////
+
+// Write a function – letterCount
+// It accepts two string arguments and returns an integer of the count of occurrences the 2nd argument is found in the first one.
+// If no occurrences can be found, a count of 0 should be returned.
+// For example:
+// letterCount("Maggy", "g") // => 2
+// letterCount("Barry", "b") // => 1
+// letterCount("", "z")      // => 0
+
+// const letterCount = (word, letter) => {
+//     const array = word.toLowerCase().split('');
+//     console.log(array);
+//     console.log(array.filter(value => value === letter).length);
+// }
+
+// letterCount("Maggy", "g");
+// letterCount("Barry", "b");
+// letterCount("", "z");
+
+// const letterCount = (word, letter) => word.toLowerCase().split('')
+//     .reduce((acc, value) => (value === letter ? acc + 1 : acc), 0);
+
+// console.log(letterCount("Maggy", "g"));
+// console.log(letterCount("Barry", "b"));
+// console.log(letterCount("", "z"));
+
+//////////////////////////////////////////////////////////
+
+// Our football team completed the championship. The result of each match look like "x:y".
+// Results of all matches are recorded in the collection like this: ["3:1", "2:2", "0:1", ...]
+
+// Write a function – countPoints
+// It should accept a collection of football games scores and count the points of our team in the championship.
+// Rules for counting points for each match:
+// •	if x > y   - 3 points
+// •	if x < y   - 0 point
+// •	if x = y   - 1 point
+
+// For example:
+// countPoints(['3:1', '1:0', '0:0', '1:2', '4:0', '2:3', '1:1', '0:1', '2:1', '1:0']) // => 17
+// countPoints(['1:1', '1:2', '2:0', '4:2', '0:1', '2:3', '1:1', '0:1', '1:1', '3:0']) // => 12
+
+// const countPoints = array => (array.map((element, index) => element[0] === element[2] ? 1 : element[0] > element[2] ? 3 : 0))
+//     .reduce((acc, element) => acc + element);
+      
+// console.log(countPoints(['3:1', '1:0', '0:0', '1:2', '4:0', '2:3', '1:1', '0:1', '2:1', '1:0'])) // => 17
+// console.log(countPoints(['1:1', '1:2', '2:0', '4:2', '0:1', '2:3', '1:1', '0:1', '1:1', '3:0'])) // => 12
+
+// const countPoints = array => array.reduce((acc, element) => acc + (element[0] > element[2] ? 3 : element[0] === element[2] ? 1 : 0), 0);
+
+// console.log(countPoints(['3:1', '1:0', '0:0', '1:2', '4:0', '2:3', '1:1', '0:1', '2:1', '1:0'])) // => 17
+// console.log(countPoints(['1:1', '1:2', '2:0', '4:2', '0:1', '2:3', '1:1', '0:1', '1:1', '3:0'])) // => 12
+
+// const countPoints = (array) => array.filter(value => value[0] > value[2]).length * 3 + array.filter(value => value[0] === value[2]).length;
+
+// console.log(countPoints(['3:1', '1:0', '0:0', '1:2', '4:0', '2:3', '1:1', '0:1', '2:1', '1:0'])) // => 17
+// console.log(countPoints(['1:1', '1:2', '2:0', '4:2', '0:1', '2:3', '1:1', '0:1', '1:1', '3:0'])) // => 12
+
+////////////////////////////////////////////////////////////////////
+
+// getSums([1, 2, 3, 4, 5])
+// [1, 3, 6, 10, 15];
+
+const Sum = (acc, number, index) => {
+    if (index > 0) {[]} else {return [number]}
+}
+
+const getSum = (array) = array.reduce((acc, elem, index) => (index > 0 () , []))
